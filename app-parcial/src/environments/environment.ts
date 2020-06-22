@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   API: {
     EndPoint:{
-      Northwind: 'http://localhost/API.Northwind/v1/Analysis/Northwind/',
+      Northwind: 'http://192.168.10.100/API.Northwind/v1/Analysis/Northwind/',
       NodeJS: 'http://localhost:3000/api/'
     }
   }
