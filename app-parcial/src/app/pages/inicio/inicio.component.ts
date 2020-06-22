@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MongologinService } from 'src/app/services/mongologin.service'
+import { MongologinService } from 'src/app/services/mongologin.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,19 +9,19 @@ import { Router } from '@angular/router';
 })
 export class InicioComponent implements OnInit {
 
-  Usuario:any;
-  Pass:any;
+  Usuario: any;
+  Pass: any;
   Pagina = null;
-  
-  constructor(private auth:MongologinService, private router:Router) { }
+
+  constructor(private auth: MongologinService, private router: Router) { }
 
   userBody = {
-    userName: "",
-    password: ""
-  }
+    userName: '',
+    password: ''
+  };
 
-  userOK:boolean;
-  userRol:string;
+  userOK: boolean;
+  userRol: string;
 
 
   ngOnInit(): void {
@@ -30,13 +30,13 @@ export class InicioComponent implements OnInit {
   iniciarSesion(){
     this.userBody.userName = this.Usuario.text;
     this.userBody.password = this.Pass.text;
-    this.auth.getAuth(this.userBody).subscribe((result:any)=>{
+    this.auth.getAuth(this.userBody).subscribe((result: any) => {
       this.userOK = result.ok;
-      if(!this.userOK){
+      if (!this.userOK) {
         this.router.navigate(['/inicio']);
       }else{
-        this.userRol = result.rol
-        if(this.userRol == "ROL_PIE"){
+        this.userRol = result.rol;
+        if (this.userRol === 'ROL_PIE') {
           this.router.navigate(['/top5']);
         }
         this.router.navigate(['/histograma']);

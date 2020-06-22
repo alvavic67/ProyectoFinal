@@ -96,7 +96,7 @@ app.post('/api/auth/login', async (req:Request, res:Response) => {
 
     
 });
-app.post('api/auth/createUser', async(req:Request, res:Response)=>{
+app.post('api/auth/createUser', async(req: Request, res: Response) => {
     const {email, password, fullName, urlPhoto, rol} = req.body;
 
     const newUser = {
