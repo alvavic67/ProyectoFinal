@@ -10,7 +10,7 @@ const urlAPI = environment.API.EndPoint.NodeJS;
 })
 export class MongologinService {
 
-  constructor(private http:HttpClient) { 
+  constructor(private http: HttpClient) {
 
   }
 
