@@ -1,0 +1,9 @@
+<div class="jumbotron mt-5 ml-5 mr-5 mb-5">
+    <h1 class="display-4">Inicia sesión</h1>
+    <hr class="my-4">
+    <input type="text" [(ngModel)]="Usuario"  id="txtUser" class="form-control" placeholder="Usuario" aria-label="Usuario" aria-describedby="basic-addon1">
+    <h1></h1>
+    <input type="text" [(ngModel)]="Pass" id="txtPassword" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="basic-addon1">
+    <hr class="my-4">
+    <button type="button" [routerLink]="Pagina" (click)="iniciarSesion()" class="btn btn-secondary btn-lg btn-block">Iniciar sesión</button>
+</div>
