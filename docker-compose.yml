@@ -30,7 +30,7 @@ services:
   angular-dashboard:
     container_name: "Angular-Dashboard"
     build:
-      context: ./ProyectoFinal/app-parcial
+      context: ./app-parcial
       dockerfile: Dockerfile
     restart: always
     links:
