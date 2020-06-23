@@ -1,4 +1,4 @@
-FROM node
+FROM node:latest
 
 RUN mkdir -p /usr/src/api
 WORKDIR /usr/src/app
